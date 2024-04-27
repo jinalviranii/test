@@ -1,15 +1,9 @@
-FROM openresty/openresty:1.21.4.3-3-alpine-fat
+FROM openresty/openresty:1.17.8.2-alpine-fat
 
-# Verify curl version (optional)
-RUN curl --version
-
-RUN apk add --update openssl git gcc make curl openssl && \
+RUN apk add --update openssl git gcc make openssl && \
     rm -rf /var/cache/apk/*
 
 RUN apk update
-
-# Verify curl version (optional)
-RUN curl --version
 
 RUN git config --global url."https://github.com/".insteadOf git@github.com:
 RUN git config --global url."https://".insteadOf git://
