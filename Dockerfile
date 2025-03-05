@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.21.4.3-3-alpine-fat
+FROM openresty/openresty:1.27.1.1-3-alpine-fat
 
 # Verify curl version (optional)
 RUN curl --version
